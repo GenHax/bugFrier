@@ -1,0 +1,33 @@
+<nav class="">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">grb</a>
+      {{!-- <a href="#" data-activates="main-menu" class=""><i class="fa fa-bars"></i></a> --}}
+      <!-- RIGHT NAV -->
+      <ul class="">
+        {{#if user}}
+        <li><a href="/garbageHistory">Welcome {{user.firstName}}</a></li>
+        <li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+        {{else}}
+        <li><a href="/garbages"> garbages</a></li>
+        {{/if}}
+      </ul>
+      <!-- SIDE MENU -->
+      {{!-- <ul class="side-nav" id="main-menu"> --}}
+        {{#if user}} 
+        {{else}}
+        <li>
+          <a class="btn red darken-1" href="/auth/google"><i class="fa fa-google left"></i> Login With Google</a>
+        </li>
+        {{/if}}
+        <li><a href="/garbages"> Public garbages</a></li>
+        {{#if user}}
+        {{!-- <li class="divider"></li> --}}
+        <li><a href="/garbageHistory"> garbage history</a></li>
+        <li><a href="/garbages/my">My garbages</a></li>
+        <li><a href="/auth/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

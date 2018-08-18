@@ -1,0 +1,39 @@
+<h1>Welcome {{user.firstName}}</h1>
+<h4>Your garbages</h4>
+
+{{#if garbages}}
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>title</th>
+                <th>date</th>
+                <th>status</th>
+                <th></th>  
+            </tr>
+        </thead>
+
+        <tbody>
+    
+            {{#each garbages}}
+                <tr>
+                    <td><a href="/garbages/show/{{id}}">{{title}}</a> </td>
+                    <td>{{formatDate date 'MMMM do YYYY'}}</td>
+                    <td><span class="dash-status">{{status}}</span> </td>
+                    <td><a href="/garbages/edit/{{id}}" class="btn left-align">
+                            <i class="fa fa-pencil">edit</i> 
+                        </a>
+                        <form action="/garbages/{{id}}?_method=DELETE" method="POST" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button class="btn red">delete</button>
+                        </form>
+                        
+                    </td>
+
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<p>you have not created any garbages</p>
+
+{{/if}}

@@ -1,0 +1,33 @@
+<h1>garbages</h1>
+<div class="row">
+    {{#each garbages}}
+
+        <div class="col s12 m4">
+            <div class="card">
+                <div class="card-image">
+                    {{#if user}}
+                        {{{editIcon user.id ../user.id id }}}
+                    {{/if}}
+                </div>
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    <p class="garbage-text">{{stripTags (truncate body 150)}}</p>
+                    {{!-- <p class="garbage-text">{{{body}}}</p> --}}
+                    <br>
+                        <div class="chip">
+                           <img src="{{user.image}}" alt="Contact Person">
+                            <a href="/garbages/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>
+                            
+                        </div>
+                </div>
+                <div class="card-action ccenter-align">
+                    <a class="btn grey" href="/garbages/show/{{id}}">read more</a>
+                </div>
+            </div>
+        </div>
+        
+    {{else}}
+    <p>No garbages</p>
+
+    {{/each}}
+</div>

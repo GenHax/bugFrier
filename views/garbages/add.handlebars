@@ -1,0 +1,64 @@
+<h1>add garbages</h1>
+
+<div class="row">
+    <form action="/garbages" method="post" class="col s12">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="title">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row" style="visibility: hidden">
+            <div class="input-field">
+                <select name="status" id="">
+                    <option value="public" selected > public </option>
+                    
+                </select>
+                <label for="status">status</label>
+            </div>
+        </div>
+        
+
+        <div class="row" id="waste-type">
+            <div class="input-field">
+                <select name="wasteType" id="">
+                    <option value="plastic" selected > Plastic waste </option>
+                    <option value="paper">Paper/card waste </option>
+                    <option value="metals">Tins and metals </option>
+                     <option value="glass">Ceramics and glass  </option>
+                </select>
+                <label for="status">waste-type</label>
+            </div>
+        </div>
+
+        <div class="row" id="waste-qnt">
+            <div class="input-field">
+                <select name="wasteQuantity" id="">
+                    <option value="one" selected > 1 kg </option>
+                    <option value="two">2 kg</option>
+                    <option value="three">3 kg</option>
+                    <option value="four">4 kg</option>
+                    <option value="five">5 kg</option>
+                </select>
+                <label for="status">waste-quantity</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>
+                <input type="checkbox" name="allowComments" class="filled-in" id="filled-in-box" checked="checked">
+                <label for="filled-in-box">Allow Comments</label> <!-- match with id -->
+            </p>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell us about your garbages <small>(optional)</small></h5>
+                <textarea name="body">
+                </textarea>    
+                
+            </div>
+        </div>
+        <input type="submit" value="save" class="btn">        
+    </form>
+</div>

@@ -1,0 +1,42 @@
+<h1>edit garbage</h1>
+
+<div class="row">
+    <form action="/garbages/{{garbage.id}}?_method=PUT" method="post" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name="title" value="{{garbage.title}}">
+                <label for="title">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <select name="status" id="">
+                    {{#select garbage.status}}
+                        <option value="public" selected > public </option>
+                        <option value="private">private</option>
+                        <option value="unpublished">unpublished</option>
+                    {{/select}}
+                </select>
+                <label for="status">status</label>
+            </div>
+        </div>
+        <div class="row">
+            <p>
+                <input type="checkbox" name="allowComments" class="filled-in" id="filled-in-box" 
+                {{#if garbage.allowComments}}  checked="checked" {{/if}} >
+                <label for="filled-in-box">Allow Comments</label> <!-- match with id -->
+            </p>
+        </div>
+        <div class="row">
+            <div class="input-field">
+                <h5>Tell us your garbage</h5>
+                <textarea name="body">{{garbage.body}}
+                </textarea>    
+                
+            </div>
+        </div>
+        <input type="submit" value="save" class="btn">        
+    </form>
+</div>
