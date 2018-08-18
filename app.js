@@ -12,7 +12,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local'),Strategy;
 const mongo = require('mongodb');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/elearn');
+mongoose.connect('mongodb://localhost/wasteManagement');
 const db = mongoose.connection;
 async = require('async');
 
