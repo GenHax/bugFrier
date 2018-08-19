@@ -10,7 +10,10 @@ const UserSchema = new Schema({
     email: {type: String, required: true },
     firstName: {type: String},
     lastName: {type: String},
-    image: {type: String}
+    image: {type: String},
+    houseNumber: {type: String, required: true},
+    address: {type: String, required: true},
+    pin: {type: Number, required: true},
 
 });
 
