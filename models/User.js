@@ -11,9 +11,9 @@ const UserSchema = new Schema({
     firstName: {type: String},
     lastName: {type: String},
     image: {type: String},
-    houseNumber: {type: String, required: true},
-    address: {type: String, required: true},
-    pin: {type: Number, required: true},
+    houseNumber: {type: String},
+    address: {type: String},
+    pin: {type: Number},
 
 });
 

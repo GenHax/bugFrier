@@ -9,7 +9,7 @@ const {ensureAuthenticated, ensureGuest} = require('../helpers/auth');
 router.get('/', (req, res)=>{ //not restricting because public garbages should be acessible
     Garbage.find({status: 'public'})
         .populate('user')
-        .sort({date: 'desc'})
+        .sort({pin: 'desc'})
         .then(garbages=>{
             res.render('garbages/index', {
                 garbages: garbages
