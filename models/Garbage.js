@@ -12,12 +12,11 @@ const GarbageSchema = new Schema({
     comment: [{
         commentBody: {type: String, required: true},
         commentDate: {type: Date, default: Date.now()},
-        commentUser: {type: Schema.Types.ObjectId, ref: 'users'}//----------------
+        commentUser: {type: Schema.Types.ObjectId, ref: 'users'}
     }],
-    user: {type: Schema.Types.ObjectId, ref: 'users'},//-------------------------}
+    user: {type: Schema.Types.ObjectId, ref: 'users'},
     date: {type: Date, default: Date.now()}
 });
 
 //creating collection and add schema
-mongoose.model('garbages', GarbageSchema, 'garbages'); //third paramater-> to specify the name of the collection--
-                                                    //recheck
+mongoose.model('garbages', GarbageSchema, 'garbages');
