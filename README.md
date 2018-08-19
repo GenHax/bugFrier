@@ -1,8 +1,8 @@
 # Bug Frier
 ## Members
-* Debasish Sahoo
-* Rupesh Jha
-* Nitesh Tosniwal
+* (Debasish Sahoo)[https://github.com/debck]
+* (Rupesh Jha)[https://github.com/Rupeshiya]
+* (Nitesh Tosniwal)[https://github.com/sudonitesh]
 
 # Project Title:
 * Waste Management
