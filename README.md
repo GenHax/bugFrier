@@ -27,8 +27,11 @@
   * CSS
   * BOOTSTRAP
   * MATERIALIZE CSS
+  * JAVA
 * Backend
   * NODEJS
   * EXPRESSJS
+  * PHP
 * Database
   * MONGODB
+  * SQL
